@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Halo, Selamat Datang!</h1>
-        <p>Website keren ini dibuat oleh Fahri & Syauqi.</p>
+        <h1>yoooooo welcome</h1>
+        <p>syauqi hobi nyawit</p>
         <button>Klik Saya</button>
     </div>
 </body>
