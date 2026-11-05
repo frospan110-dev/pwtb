@@ -1,45 +1,327 @@
-/* Mengatur font dan warna latar belakang */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #74b9ff, #a29bfe);
-    height: 100vh;
+/* Reset Basic */
+* {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Kotak utama di tengah layar */
-.container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Buttons System */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+}
+
+.btn-outline:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-large {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
     text-align: center;
 }
 
-h1 {
-    color: #2d3436;
+.badge {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 20px 0;
+    color: #1e293b;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.hero-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+/* Quick Amount Buttons */
+.quick-amounts {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.quick-amounts p {
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
-p {
-    color: #636e72;
+.amount-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tag-btn {
+    background-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2563eb;
+    transition: 0.2s;
+}
+
+.tag-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Section General */
+.section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #ffffff;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+/* Kalkulator Simulasi */
+.calculator-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.calc-group {
     margin-bottom: 20px;
 }
 
-/* Desain Tombol */
-button {
-    background-color: #0984e3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.calc-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
-button:hover {
-    background-color: #74b9ff;
+.calc-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.tenor-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.btn-tenor {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-tenor.active, .btn-tenor:hover {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.calc-result {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.calc-result h3 {
+    color: #16a34a;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 30px;
+    border-radius: 16px;
+    position: relative;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card-featured {
+    border: 2px solid #2563eb;
+    background-color: #ffffff;
+}
+
+.populer {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2563eb;
+    margin: 10px 0 20px;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    color: #4b5563;
+}
+
+/* FAQ Buttons */
+.faq-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
 }
